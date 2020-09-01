@@ -1,0 +1,9 @@
+.resaltado-titulo{
+    background: red;
+    padding: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.grupo1-cabecera{
+    border-top: 5px solid red;
+}
