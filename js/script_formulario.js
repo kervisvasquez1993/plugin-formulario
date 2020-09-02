@@ -52,7 +52,8 @@
             e.preventDefault()
 		    let clon_dia = dia_hija.cloneNode(dia_hija)
 			clon_dia.classList.add('siguiente_dia')
-			dia_padre.appendChild(clon_dia)
+			console.log(dia_padre.appendChild(clon_dia))
+			
 			let campos_eliminar_repetido = document.querySelectorAll('.siguiente_dia .grupos-comun  .wrap-comun ')
 			let campos_eliminar_repetido2 = document.querySelectorAll('.siguiente_dia .grupos-comun  .wrap-comun .test')
 			//console.log(campos_eliminar_repetido)
@@ -61,10 +62,8 @@
 			campos_eliminar_repetido2.forEach(a => {
 				a.remove()
             })
-
-            
             // variables conferencista padre e hijas
-			conferencista_padre     = document.querySelectorAll('.wrap-conferencista-padre'),
+			/*conferencista_padre     = document.querySelectorAll('.wrap-conferencista-padre'),
             conferencista_hijo      = document.querySelectorAll('.wrapp-conferencista-child'),
             // variables moderadores padre e hijas
 			moderador_padre         = document.querySelectorAll('.wrap-moderador-padre'),
@@ -87,9 +86,10 @@
 			conferencista_array[contador_dia].addEventListener('click', (e)=>{
 				e.preventDefault()
 			ciclo(conferencista_hijo[contador_dia], conferencista_padre[contador_dia])
+			
 		  })
        
-            
+            */
         }
         
 
