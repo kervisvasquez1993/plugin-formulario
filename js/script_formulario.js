@@ -11,18 +11,18 @@
           dia_padre                 = document.querySelector('.wrap-dia-padre'),
           dia_hija                  = document.querySelector('.wrap-day-child'),
           //conferencista   
-          conferencista_padre       = document.querySelectorAll('.wrap-conferencista-padre'),
-          conferencista_hijo        = document.querySelectorAll('.wrapp-conferencista-child'),
+          conferencista_padre       = document.querySelector('.wrap-conferencista-padre'),
+          conferencista_hijo        = document.querySelector('.wrapp-conferencista-child'),
           //moderador   
-          moderador_padre           = document.querySelectorAll('.wrap-moderador-padre'),
-          moderador_hijo            = document.querySelectorAll('.wrap-moderadores-child'),
+          moderador_padre           = document.querySelector('.wrap-moderador-padre'),
+          moderador_hijo            = document.querySelector('.wrap-moderadores-child'),
 		  //botones   
 		  anadir_dias               = document.querySelector('.anadir-dia'),
-          anadir_moderador_all      = document.querySelectorAll('.boton-añadir-moderador'),
-		  anadir_conferencista_all  = document.querySelectorAll('.boton-añadir-conferencista'),
+          anadir_moderador_all      = document.querySelector('.boton-añadir-moderador'),
+		  anadir_conferencista_all  = document.querySelector('.boton-añadir-conferencista'),
 		  
-		  moderador_array           = Array.from(anadir_moderador_all),
-		  conferencista_array       = Array.from(anadir_conferencista_all)
+		  //moderador_array           = Array.from(anadir_moderador_all),
+		  //conferencista       = Array.from(anadir_conferencista_all)
 		  
           content_dias[0].innerHTML = dias_string
           //console.log(content_dias[0])
@@ -74,8 +74,7 @@
 		    anadir_conferencista_all = document.querySelectorAll('.boton-añadir-conferencista'),
 		    moderador_array = Array.from(anadir_moderador_all),
 			conferencista_array = Array.from(anadir_conferencista_all)
-			
-			
+			anadir_conferencista_all
 			// eventos para agregar moderadores  
 	        moderador_array[contador_dia].addEventListener('click', (e)=>
 			{
@@ -100,18 +99,18 @@
 		 
 		 
 		  //eventos conferncista
-          conferencista_array[0].addEventListener('click', (e)=>{
+          anadir_conferencista_all.addEventListener('click', (e)=>{
                 e.preventDefault()
-            ciclo(conferencista_hijo[0], conferencista_padre[0])
+            ciclo(conferencista_hijo, conferencista_padre)
           })
 	   
 	   
 
          //eventos moderador
-         moderador_array[0].addEventListener('click', (e)=>
+         anadir_moderador_all.addEventListener('click', (e)=>
          {
                e.preventDefault()
-           ciclo(moderador_hijo[0], moderador_padre[0])
+           ciclo(moderador_hijo, moderador_padre)
          })
          
          
