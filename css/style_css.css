@@ -1,9 +1,62 @@
+.file-form{
+    width: 0.1px !important;
+    height: 0.1px !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    z-index: -1 !important;
+    
+    }
+
+    .file-label{
+        font-size: 14px !important;
+        font-weight: 600 !important;
+        color: #fff !important;
+        background-color: #f5333f !important;
+        display: inline-block !important;
+        transition: all .5s !important;
+        cursor: pointer !important;
+        text-transform: uppercase !important;
+        width: fit-content !important;
+        text-align: center !important;
+        margin: 0 50px;
+    }
 .especializacion{
     width: 100%;
 }
-.border-botones{
-    border: 2px solid #f5333f !important;
+.border-botones,
+.border-botones:hover
+{
+    border: 1px solid #f5333f !important;
 }
 select{
-    background: transparent;
+    background: transparent !important;
+}
+.div-imagen{
+
+    display: flex;
+    justify-content: center;
+    position: relative;
+   
+}
+
+.div-imagen img {
+    width: 70%;
+    z-index: 100;
+    position: absolute;
+    margin: -50px;
+    padding: 0px 20px;
+}
+
+.resaltado-titulo{
+    background: red;
+}
+
+.eliminar{
+    background: red;
+    text-transform: uppercase;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
 }

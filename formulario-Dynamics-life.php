@@ -11,9 +11,23 @@
 */
 
 function dynamics_life_recetas_shorcode()
-{
-   echo do_shortcode ('[contact-form-7 id="9" title="Formulario de contacto 1_copy"]');
-   
+{  
+   ?> 
+
+   <div class="container" style="
+   background: url('<?php echo plugins_url('formulario-Dynamics-life/img/fondo.jpg') ?>');
+   background-size: cover;
+   ">
+   <div class="div-imagen test-center">
+    <img src="<?php echo plugins_url('formulario-Dynamics-life/img/logo.jpg')?>">
+   </div>
+   <?php 
+   //echo do_shortcode ('[contact-form-7 id="9" title="Formulario de contacto 1_copy"]');
+
+   echo do_shortcode ('[contact-form-7 id="8287" title="formulario de colaboradores"]');
+   ?>
+  </div>
+   <?php 
 }
 // Incluir Bootstrap CSS
 function bootstrap_css_js() {

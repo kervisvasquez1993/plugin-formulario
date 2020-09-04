@@ -37,9 +37,15 @@
 		  // funcion para repetir los campos
 		  function ciclo(elemento_hijo,elemento_padre)
          {
-		    ciclo_conferencista += 1
+			ciclo_conferencista += 1
+			let eliminar = document.createElement('p')
             let clon_hijo = elemento_hijo.cloneNode(elemento_hijo)
 			let input = document.querySelectorAll('.test:last-child .wpcf7-form-control-wrap .wpcf7-form-control')
+			
+			eliminar.classList = "eliminar"
+			eliminar.innerHTML = 'x'
+			console.log(elemento_padre)
+			clon_hijo.appendChild(eliminar)
 			clon_hijo.classList.add('test')
 		    elemento_padre.appendChild(clon_hijo)
             inputArr = Array.from(input)
@@ -49,7 +55,14 @@
                let conferencista_name_atribute = `${name_input}_${ciclo_conferencista}`
                i.setAttribute('name', conferencista_name_atribute )
                i.value = ''
-		    })
+			})
+			
+
+
+
+			eliminar.addEventListener('click' , ()=>{
+				eliminar.parentElement.remove()
+			})
 		 }
 	   
 	   function ciclo_dias(e)
@@ -118,8 +131,9 @@
                e.preventDefault()
            ciclo(moderador_hijo[0], moderador_padre[0])
          })
-         
-         
+		 
+		 
+		 
 })
 
        
