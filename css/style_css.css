@@ -1,9 +1,9 @@
-.resaltado-titulo{
-    background: red;
-    padding: 5px;
-    font-size: 1rem;
-    font-weight: bold;
+.especializacion{
+    width: 100%;
 }
-.grupo1-cabecera{
-    border-top: 5px solid red;
+.border-botones{
+    border: 2px solid #f5333f !important;
+}
+select{
+    background: transparent;
 }
