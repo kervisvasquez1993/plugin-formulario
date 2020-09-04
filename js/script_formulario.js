@@ -68,6 +68,8 @@
 	   function ciclo_dias(e)
 	   {
 			e.preventDefault()
+			eliminar2 = document.createElement('p')
+
 			contador_dia += 1
 		    let clon_dia = dia_hija.cloneNode(dia_hija)
 			clon_dia.classList.add('siguiente_dia')
