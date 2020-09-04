@@ -6,7 +6,7 @@
        </label>
       <p class="red text-center bg-danger">SELECIONALA MODALIDAD</p>
       <div class="text-center">
-       [radio modalidad  label_first default:2 "Ciclo" "Conferencista"]
+       [radio modalidad  label_first default:1 "Ciclo" "Conferencista"]
        </div>
 
 
