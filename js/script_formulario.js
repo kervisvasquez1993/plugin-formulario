@@ -36,6 +36,7 @@
 		  function ciclo(elemento_hijo,elemento_padre)
          {
 			ciclo_conferencista += 1
+<<<<<<< HEAD
 			let eliminar = document.createElement('p')
             let clon_hijo = elemento_hijo.cloneNode(elemento_hijo)
 			let input = document.querySelectorAll('.test:last-child .wpcf7-form-control-wrap .wpcf7-form-control')
@@ -45,6 +46,15 @@
 			clon_hijo.classList.add('test')
 		    elemento_padre.appendChild(clon_hijo)
             inputArr = Array.from(input)
+=======
+			console.log(elemento_hijo)
+			let clon_hijo = elemento_hijo.cloneNode(elemento_hijo)
+			clon_hijo.classList.add('test')
+			elemento_padre.appendChild(clon_hijo)
+			let input = document.querySelectorAll('.test:last-child .wpcf7-form-control-wrap .wpcf7-form-control')
+			inputArr = Array.from(input)
+			
+>>>>>>> 2b9e4e0c6df6e105ebf705ec2099a7b0bb8846f1
 			inputArr.forEach(i =>
 			{
                name_input = i.getAttribute('name')
@@ -67,6 +77,7 @@
 			contador_dia += 1
 		    let clon_dia = dia_hija.cloneNode(dia_hija)
 			clon_dia.classList.add('siguiente_dia')
+			
 			dia_padre.appendChild(clon_dia)
 			let campos_eliminar_repetido = document.querySelectorAll('.siguiente_dia .grupos-comun  .wrap-comun ')
 			let campos_eliminar_repetido2 = document.querySelectorAll('.siguiente_dia .grupos-comun  .wrap-comun .test')
