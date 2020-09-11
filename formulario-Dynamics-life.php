@@ -14,12 +14,12 @@ function dynamics_life_recetas_shorcode()
 {  
    ?> 
 
-   <div class="container" style="
+   <div class="container border-botones flex" style="
    background: url('<?php echo plugins_url('formulario-Dynamics-life/img/fondo.jpg') ?>');
    background-size: cover;
    ">
-   <div class="div-imagen test-center">
-    <img src="<?php echo plugins_url('formulario-Dynamics-life/img/logo.jpg')?>">
+   <div class="div-imagen test-center ">
+    <img  class="center-block"src="<?php echo plugins_url('formulario-Dynamics-life/img/logo.jpg')?>">
    </div>
    <?php 
    //echo do_shortcode ('[contact-form-7 id="9" title="Formulario de contacto 1_copy"]');

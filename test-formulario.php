@@ -1,25 +1,30 @@
 <div class="container">
 
  <h5 class="text-center">Queremos que seas parte de nosotros Inscribete Aquí </h5>
-       <label class="col-12 col-sm-12">
+       <div class="col-12 col-sm-12">
            [select* patrocinante  class:border-botones class:especializacion  "Patrocinante" "Dynamics" "Surgery" "Dental"]
-       </label>
-      <p class="red text-center bg-danger">SELECIONALA MODALIDAD</p>
-      <div class="text-center">
-       [radio modalidad  label_first default:2 "Ciclo" "Conferencista"]
+       </div>
+       <div class="flex-center">
+          <p class="red text-center bg-danger">SELECIONALA MODALIDAD</p>
+      </div>
+      <div class="text-center flex-center">
+       [radio modalidad  div_first default:2 "Ciclo" "Conferencista"]
        </div>
 
 
 [group Ciclo]
+
+      <div class="container">
         <div class="grupo1-cabecera  row">
-              <span class="resaltado-titulo col"> CICLO </span>
-              <label class="col-12 col-sm-12"> 
+              <span class="resaltado-titulo"> CICLO </span>
+              <div class="col-12 col-sm-12"> 
                  Titulo (*)
                  [text* titulo_ciclo class:border-botones placeholder "Titulo"]
-              </label>
-              <label class="col-12 col-sm-12"> Área de Especialización  (*)
+              </div>
+              <div class="col-12 col-sm-12"> Área de Especialización  (*)
                        [select* especializacion class:especializacion class:border-botones include_blank "area1" "area2" "area3" "area4" "area5"]
-              </label>
+              </div>
+        </div>
         </div>
        <!--FIN DE TITULO -->
 
@@ -31,12 +36,12 @@
                 <!-- ========CONFERENCIA ======= -->
                 <div class="grupo1-conferencia">
                  <span class="resaltado-titulo text-center">CONFERENCIA</span>
-                     <label class="col-12 col-sm-12"> 
+                     <div class="col-12 col-sm-12"> 
                         [text* titulo-conferencia_ciclo class:border-botones  placeholder "Título"]
-                     </label>
-                     <label class="col-12 col-sm-12">
+                     </div>
+                     <div class="col-12 col-sm-12">
                         [textarea* descripcion-conferencia_ciclo class:border-botones placeholder "Descripción"] 
-                     </label>
+                     </div>
             </div> 
                 <!-- =========== FIN DE CONFERENCIA ============ -->
                 <!-- ========== INICIO CONFERENCISTA ===== -->
@@ -44,35 +49,35 @@
                      <div class="wrap-comun wrap-conferencista-padre container"> 
                         <div class="wrap-comun-chil wrapp-conferencista-child row">
                                    <span class="resaltado-titulo">CONFERENCISTA</span>
-                                   <label class="col-12 col-sm-12">
+                                   <div class="col-12 col-sm-12">
                                       [text* nombre_conferencista_ciclo class:border-botones  placeholder "Nombre"]
-                                   </label>
-                                   <label class="col-12 col-sm-5">
+                                   </div>
+                                   <div class="col-12 col-sm-5">
                                       [tel* telefono_conferencista_ciclo class:border-botones placeholder "teléfono"]
-                                   </label> 
-                                   <label class="col-12 col-sm-7">
+                                   </div> 
+                                   <div class="col-12 col-sm-7">
                                       [email* email_conferencista_ciclo class:border-botones placeholder "Email"]
-                                   </label>
-                                   <label class="col-12 col-sm-12">
+                                   </div>
+                                   <div class="col-12 col-sm-12">
                                       [text* especializacion_conferencista_ciclo class:border-botones placeholder "Especialización"]
-                                   </label>
-                                   <label class="col-12 col-sm-6">
+                                   </div>
+                                   <div class="col-12 col-sm-6">
                                       [text* pais_origen_conferencista_ciclo  class:border-botones placeholder "País de Origen"]
-                                   </label>
-                                   <label class="col-12 col-sm-6">
+                                   </div>
+                                   <div class="col-12 col-sm-6">
                                       [text* pais_residencia_conferencista_ciclo  class:border-botones placeholder "País de 
                                       Residencia"]
-                                   </label>
+                                   </div>
              
                                    <div class="col col-12 adjuntar_informacion row">
-                                        <label class="col file-label">
+                                        <div class="col file-div">
                                             Adjuntar CV
                                            [file*   adjuntar_cv_conferencista_ciclo class:file-form]
-                                        </label>
-                                        <label class="col file-label">
+                                        </div>
+                                        <div class="col file-div">
                                              Fotografía
                                              [file*  fotografia_conferencista_ciclo class:file-form] 
-                                        </label>
+                                        </div>
                                    </div>
                         </div>
                      </div>
@@ -85,29 +90,29 @@
                 <div class="grupos-comun grupo1-moderador">
                     <div class="wrap-comun wrap-moderador-padre container"> 
                          <div class=" wrap-comun-chil wrap-moderadores-child row">
-                                <span class="resaltado col-12 col-sm-12">MODERADOR</span>
-                                <label  class="col-12 col-sm-12">
+                                <span class="resaltado-titulo">MODERADOR</span>
+                                <div  class="col-12 col-sm-12">
                                     [text nombre_moderador_ciclo class:border-botones  placeholder "Nombre"]
-                                </label>
-                                <label class="col-12 col-sm-5">
-                                    [tel telefono_moderador_ciclo class:border-botones placeholder "Teléfono"]
-                                </label>
-                                <label class="col-12 col-sm-7">
-                                    [email correo_moderador_ciclo class:border-botones placeholder "E-mail"]
-                                </label>
-                                <label class="col col-12">
-                                    [text especializacion_moderador_ciclo class:border-botones placeholder "Especialización"]
-                                </label>
-                                <div class="adjuntar_informacion col col-12">
-                                  <label>
-                                      Adjuntar CV
-                                     [file adjuntar_cv_moderador_ciclo]
-                                  </label>
-                                  <label>
-                                       Fotografía
-                                       [file fotografia_moderador_ciclo]
-                                  </label>
                                 </div>
+                                <div class="col-12 col-sm-5">
+                                    [tel telefono_moderador_ciclo class:border-botones placeholder "Teléfono"]
+                                </div>
+                                <div class="col-12 col-sm-7">
+                                    [email correo_moderador_ciclo class:border-botones placeholder "E-mail"]
+                                </div>
+                                <div class="col col-12">
+                                    [text especializacion_moderador_ciclo class:border-botones placeholder "Especialización"]
+                                </div>
+                                <div class="col col-12 adjuntar_informacion row">
+                                        <div class="col file-div">
+                                            Adjuntar CV
+                                           [file*   adjuntar_cv_moderador_ciclo class:file-form]
+                                        </div>
+                                        <div class="col file-div">
+                                             Fotografía
+                                             [file*  fotografia_moderador_ciclo class:file-form] 
+                                        </div>
+                                   </div>
                           </div>
                     </div>    
                     <!--============ inicio de boton para añadir moderadores-->
@@ -128,12 +133,12 @@
                 <!-- ========CONFERENCIA ======= -->
                 <div class="grupo1-conferencia">
                  <span class="resaltado-titulo text-center">CONFERENCIA</span>
-                     <label class="col-12 col-sm-12"> 
+                     <div class="col-12 col-sm-12"> 
                         [text* titulo-conferencia_conferencista class:border-botones  placeholder "Título"]
-                     </label>
-                     <label class="col-12 col-sm-12">
+                     </div>
+                     <div class="col-12 col-sm-12">
                         [textarea* descripcion-conferencia_ciclo_conferencista class:border-botones placeholder "Descripción"] 
-                     </label>
+                     </div>
             </div> 
                 <!-- =========== FIN DE CONFERENCIA ============ -->
                 <!-- ========== INICIO CONFERENCISTA ===== -->
@@ -141,40 +146,40 @@
                      <div class="wrap-comun wrap-conferencista-padre container"> 
                         <div class="wrap-comun-chil wrapp-conferencista-child row">
                                    <span class="resaltado-titulo">CONFERENCISTA</span>
-                                   <label class="col-12 col-sm-12">
+                                   <div class="col-12 col-sm-12">
                                       [text* nombre_conferencista_conferencista class:border-botones  placeholder "Nombre"]
-                                   </label>
-                                   <label class="col-12 col-sm-5">
+                                   </div>
+                                   <div class="col-12 col-sm-5">
                                       [tel* telefono_conferencista_conferencista class:border-botones placeholder "teléfono"]
-                                   </label> 
-                                   <label class="col-12 col-sm-7">
+                                   </div> 
+                                   <div class="col-12 col-sm-7">
                                       [email* email_conferencista_conferencista class:border-botones placeholder "Email"]
-                                   </label>
-                                   <label class="col-12 col-sm-12">
+                                   </div>
+                                   <div class="col-12 col-sm-12">
                                       [text* especializacion_conferencista_conferencista class:border-botones placeholder "Especialización"]
-                                   </label>
-                                   <label class="col-12 col-sm-6">
+                                   </div>
+                                   <div class="col-12 col-sm-6">
                                       [text* pais_origen_conferencista  class:border-botones placeholder "País de Origen"]
-                                   </label>
-                                   <label class="col-12 col-sm-6">
+                                   </div>
+                                   <div class="col-12 col-sm-6">
                                       [text* pais_residencia_conferencista  class:border-botones placeholder "País de 
                                       Residencia"]
-                                   </label>
+                                   </div>
              
                                    <div class="col col-12 adjuntar_informacion row">
-                                        <label class="col file-label">
+                                        <div class="col file-div">
                                             Adjuntar CV
                                            [file*   adjuntar_cv_conferencista class:file-form]
-                                        </label>
-                                        <label class="col file-label">
+                                        </div>
+                                        <div class="col file-div">
                                              Fotografía
                                              [file*  fotografia_conferencista class:file-form] 
-                                        </label>
+                                        </div>
                                    </div>
                         </div>
                      </div>
                      <!--============ inicio de boton para añadir conferencista-->
-                     <p class="boton-añadir-conferencista">Añadir Conferencista</p>
+                     <p class="boton-añadir-conferencista text-center">Añadir Conferencista</p>
                      <!-- ========== fin de boton ========== ------>
                </div> 
                 <!--========FIN DE CONFERENCISTA ====== -->
@@ -182,29 +187,29 @@
                 <div class="grupos-comun grupo1-moderador">
                     <div class="wrap-comun wrap-moderador-padre container"> 
                          <div class=" wrap-comun-chil wrap-moderadores-child row">
-                                <span class="resaltado col-12 col-sm-12">MODERADOR</span>
-                                <label  class="col-12 col-sm-12">
+                                <span class="resaltado-titulo">MODERADOR</span>
+                                <div  class="col-12 col-sm-12">
                                     [text nombre_moderador_conferencista class:border-botones  placeholder "Nombre"]
-                                </label>
-                                <label class="col-12 col-sm-5">
-                                    [tel telefono_moderador_conferencista class:border-botones placeholder "Teléfono"]
-                                </label>
-                                <label class="col-12 col-sm-7">
-                                    [email correo_moderador_conferencista class:border-botones placeholder "E-mail"]
-                                </label>
-                                <label class="col col-12">
-                                    [text especializacion_moderador_conferencista class:border-botones placeholder "Especialización"]
-                                </label>
-                                <div class="adjuntar_informacion col col-12">
-                                  <label>
-                                      Adjuntar CV
-                                     [file adjuntar_cv_moderador_conferencista]
-                                  </label>
-                                  <label>
-                                       Fotografía
-                                       [file fotografia_moderador_conferencista]
-                                  </label>
                                 </div>
+                                <div class="col-12 col-sm-5">
+                                    [tel telefono_moderador_conferencista class:border-botones placeholder "Teléfono"]
+                                </div>
+                                <div class="col-12 col-sm-7">
+                                    [email correo_moderador_conferencista class:border-botones placeholder "E-mail"]
+                                </div>
+                                <div class="col col-12">
+                                    [text especializacion_moderador_conferencista class:border-botones placeholder "Especialización"]
+                                </div>
+                                <div class="col col-12 adjuntar_informacion row">
+                                        <div class="col file-div">
+                                            Adjuntar CV
+                                           [file*   adjuntar_cv_moderador_ciclo class:file-form]
+                                        </div>
+                                        <div class="col file-div">
+                                             Fotografía
+                                             [file*  fotografia_moderador_ciclo class:file-form] 
+                                        </div>
+                                   </div>
                           </div>
                     </div>    
                     <!--============ inicio de boton para añadir moderadores-->

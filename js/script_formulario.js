@@ -4,13 +4,11 @@
 		document.addEventListener('DOMContentLoaded', () => {
 		  
 		  form = document.querySelector('.wpcf7-form')
-		  console.log(form)
-		  form.classList.add('border-botones')	
+		  	
 		  let dias = 1,
           ciclo_conferencista = 0
           dias_ciclos = Number(dias - 1)
 		  dias_string             = ` Dia ${dias}`,
-		  
           content_dias            = document.querySelectorAll('.dias-ciclos'),
           
           // añadir dias
@@ -41,10 +39,8 @@
 			let eliminar = document.createElement('p')
             let clon_hijo = elemento_hijo.cloneNode(elemento_hijo)
 			let input = document.querySelectorAll('.test:last-child .wpcf7-form-control-wrap .wpcf7-form-control')
-			
 			eliminar.classList = "eliminar"
-			eliminar.innerHTML = 'x'
-			console.log(elemento_padre)
+			eliminar.innerHTML = 'Eliminar'
 			clon_hijo.appendChild(eliminar)
 			clon_hijo.classList.add('test')
 		    elemento_padre.appendChild(clon_hijo)
@@ -132,6 +128,21 @@
            ciclo(moderador_hijo[0], moderador_padre[0])
          })
 		 
+
+		 
+		 conferencista_array[1].addEventListener('click', (e)=>{
+			e.preventDefault()
+		ciclo(conferencista_hijo[1], conferencista_padre[1])
+	  })
+
+	  moderador_array[1].addEventListener('click', (e)=>
+	  {
+			e.preventDefault()
+		ciclo(moderador_hijo[1], moderador_padre[1])
+	  })
+	  
+	  
+   
 		 
 		 
 })

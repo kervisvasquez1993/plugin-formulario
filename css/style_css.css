@@ -41,22 +41,75 @@ select{
 }
 
 .div-imagen img {
-    width: 70%;
+    width: 50%;
     z-index: 100;
-    position: absolute;
-    margin: -50px;
-    padding: 0px 20px;
+    
+    
+    
 }
 
-.resaltado-titulo{
-    background: red;
+.resaltado-titulo,
+.resaltado
+{
+    background: gray;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    
+}
+.grupo1-conferencia,
+.wrap-comun-chil,
+.grupo1-cabecera,
+.resaltado{
+    border-top: 5px solid grey;
 }
 
 .eliminar{
     background: red;
     text-transform: uppercase;
-    width: 50px;
     display: flex;
     justify-content: center;
     cursor: pointer;
+    width: 35% !important;
+    margin: 50px 0px;
+    color: white;
+    font-weight: bold;
+    
+}
+
+.padding-top{
+    margin-top: 50px;
+}
+
+.formulario{
+    background: white;
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.boton-añadir-conferencista,
+.boton-añadir-moderador{
+    border: 1px solid red;
+    max-width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+}
+
+.flex-center p{
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0 50px;
 }
