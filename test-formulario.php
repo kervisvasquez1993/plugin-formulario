@@ -1,18 +1,18 @@
 <div class="container">
-
- <h5 class="text-center">Queremos que seas parte de nosotros Inscribete Aquí </h5>
+   
+       <h5 class="text-center">Queremos que seas parte de nosotros Inscribete Aquí </h5>
        <div class="col-12 col-sm-12">
            [select* patrocinante  class:border-botones class:especializacion  "Patrocinante" "Dynamics" "Surgery" "Dental"]
        </div>
        <div class="flex-center">
-          <p class="red text-center bg-danger">SELECIONALA MODALIDAD</p>
-      </div>
-      <div class="text-center flex-center">
-       [radio modalidad  div_first default:2 "Ciclo" "Conferencista"]
+          <span class="red text-center bg-danger">SELECIONAR MODALIDAD</span>
        </div>
-
-
-[group Ciclo]
+      <div class="text-center  modalidad flex-center">
+          [radio modalidad  div_first default:2 "Ciclo" "Conferencista"]
+       </div>
+   
+  
+ [group Ciclo]
 
       <div class="container">
         <div class="grupo1-cabecera  row">
@@ -225,6 +225,7 @@
 [/group]
 
 
-[submit "Enviar"]
+
 
 </div>
+[submit "Enviar"]

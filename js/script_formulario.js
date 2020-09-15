@@ -8,8 +8,9 @@
 		  let dias = 1,
           ciclo_conferencista = 0
           dias_ciclos = Number(dias - 1)
-		  dias_string             = ` Dia ${dias}`,
-          content_dias            = document.querySelectorAll('.dias-ciclos'),
+		  dias_string             = ` Día ${dias}`,
+		  content_dias            = document.querySelectorAll('.dias-ciclos'),
+		 
           
           // añadir dias
          
@@ -36,7 +37,7 @@
 		  function ciclo(elemento_hijo,elemento_padre)
          {
 			ciclo_conferencista += 1
-<<<<<<< HEAD
+
 			let eliminar = document.createElement('p')
             let clon_hijo = elemento_hijo.cloneNode(elemento_hijo)
 			let input = document.querySelectorAll('.test:last-child .wpcf7-form-control-wrap .wpcf7-form-control')
@@ -46,15 +47,7 @@
 			clon_hijo.classList.add('test')
 		    elemento_padre.appendChild(clon_hijo)
             inputArr = Array.from(input)
-=======
-			console.log(elemento_hijo)
-			let clon_hijo = elemento_hijo.cloneNode(elemento_hijo)
-			clon_hijo.classList.add('test')
-			elemento_padre.appendChild(clon_hijo)
-			let input = document.querySelectorAll('.test:last-child .wpcf7-form-control-wrap .wpcf7-form-control')
-			inputArr = Array.from(input)
-			
->>>>>>> 2b9e4e0c6df6e105ebf705ec2099a7b0bb8846f1
+
 			inputArr.forEach(i =>
 			{
                name_input = i.getAttribute('name')
@@ -96,6 +89,9 @@
 			moderador_padre         = document.querySelectorAll('.wrap-moderador-padre'),
 			moderador_hijo          =document.querySelectorAll('.wrap-moderadores-child'),
 			// botones moderadores y conferencista
+			conferencia = document.querySelectorAll('.siguiente_dia .dias-ciclos')
+
+			
 			anadir_moderador_all = document.querySelectorAll('.boton-añadir-moderador'),
 		    anadir_conferencista_all = document.querySelectorAll('.boton-añadir-conferencista'),
 		    moderador_array = Array.from(anadir_moderador_all),
@@ -115,8 +111,13 @@
 				e.preventDefault()
 			ciclo(conferencista_hijo[contador_dia], conferencista_padre[contador_dia])
 		  })
-       
-            console.log(contador_dia)
+
+			 dias_menos = contador_dia - 1
+			 dias_mas = contador_dia + 1
+			 dias_string = ` Día ${dias_mas}`,
+             conferencia[dias_menos].innerHTML = dias_string
+			
+			 
         }
         
 

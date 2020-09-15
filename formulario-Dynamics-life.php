@@ -14,7 +14,7 @@ function dynamics_life_recetas_shorcode()
 {  
    ?> 
 
-   <div class="container border-botones flex" style="
+   <div class="container border-botones flex widt-max" style="
    background: url('<?php echo plugins_url('formulario-Dynamics-life/img/fondo.jpg') ?>');
    background-size: cover;
    ">

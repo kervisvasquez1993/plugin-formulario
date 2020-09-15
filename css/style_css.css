@@ -1,48 +1,46 @@
-.file-form{
-    width: 0.1px !important;
-    height: 0.1px !important;
-    opacity: 0 !important;
-    overflow: hidden !important;
-    position: absolute !important;
-    z-index: -1 !important;
-    
+@media screen and (min-width: 768px) {
+    .widt-max {
+      width: 60vw !important;
     }
+  }
+  
 
-    .file-label{
-        font-size: 14px !important;
-        font-weight: 600 !important;
-        color: #fff !important;
-        background-color: #f5333f !important;
-        display: inline-block !important;
-        transition: all .5s !important;
-        cursor: pointer !important;
-        text-transform: uppercase !important;
-        width: fit-content !important;
-        text-align: center !important;
-        margin: 0 50px;
-    }
+
+.wpcf7-form-control-wrap .wpcf7-form-control,
+input[type="submit"].wpcf7-form-control
+{
+    margin-top: 20px!important;
+    width: 80%;
+    margin-right: 0%!important;
+    margin-left: 0%!important;
+}
 .especializacion{
-    width: 100%;
+    width: 100% !important;
+}
+
+.file-div{
+ width: auto;
+ height: 50%;
 }
 .border-botones,
 .border-botones:hover
 {
-    border: 1px solid #f5333f !important;
+    border: 1px solid #f5333f  !important;
 }
 select{
-    background: transparent !important;
+    background: transparent  !important;
 }
 .div-imagen{
 
-    display: flex;
-    justify-content: center;
-    position: relative;
+    display: flex !important;
+    justify-content: center !important;
+    position: relative !important;
    
 }
 
 .div-imagen img {
-    width: 50%;
-    z-index: 100;
+    width: 50% !important;
+    z-index: 100 !important;
     
     
     
@@ -51,65 +49,97 @@ select{
 .resaltado-titulo,
 .resaltado
 {
-    background: gray;
-    padding: 5px;
-    color: white;
-    font-weight: bold;
+    background: gray !important;
+    padding: 5px !important;
+    color: white !important;
+    font-weight: bold !important;
     
 }
 .grupo1-conferencia,
 .wrap-comun-chil,
 .grupo1-cabecera,
 .resaltado{
-    border-top: 5px solid grey;
+    border-top: 5px solid grey !important;
 }
 
 .eliminar{
-    background: red;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-    width: 35% !important;
-    margin: 50px 0px;
-    color: white;
-    font-weight: bold;
+    background: red !important;
+    text-transform: uppercase !important;
+    display: flex !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    width: 35% !important ;
+    margin: 50px 0px !important;
+    color: white !important;
+    font-weight: bold !important;
+    padding: 0 !important;
     
 }
 
 .padding-top{
-    margin-top: 50px;
+    margin-top: 50px !important;
 }
 
 .formulario{
-    background: white;
+    background: white !important;
 }
 
 .flex{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
     
 }
 
 .boton-añadir-conferencista,
 .boton-añadir-moderador{
-    border: 1px solid red;
-    max-width: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+    border: 1px solid red !important;
+    max-width: 40% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    cursor: pointer !important;
+    padding: 0 !important;
 }
 
 .flex-center{
-    display: flex;
-    justify-content: center;
+    display: flex !important;
+    justify-content: center !important;
 }
 
 .flex-center p{
+    color: white !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    padding: 0 50px !important;
+}
+
+input, textarea{
+    width: 100% !important ;
+   
+}
+.col-12 {
+    margin: 10px 0 !important;
+}
+
+.wpcf7-form-control-wrap {
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+}
+.wpcf7-form-control {
+    margin-top: 20px!important;
+    width: 80%;
+    margin-right: 0%!important;
+    margin-left: 0%!important;
+}
+.modalidad{
     color: white;
+padding: 20px;
+font-weight: bold;
+font-size: 16px 
+}
+.dias-ciclos{
+    font-size: 25px;
     font-weight: bold;
-    text-transform: uppercase;
-    padding: 0 50px;
 }
