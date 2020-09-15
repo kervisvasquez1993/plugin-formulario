@@ -3,7 +3,7 @@
        <h5 class="text-center">Queremos que seas parte de nosotros Inscribete Aquí </h5>
        <div class="col-12 col-sm-12">
            [select* patrocinante  class:border-botones class:especializacion  "Patrocinante" "Dynamics" "Surgery" "Dental"]
-       </div>
+      </div>
        <div class="flex-center">
           <span class="red text-center bg-danger">SELECIONAR MODALIDAD</span>
        </div>
