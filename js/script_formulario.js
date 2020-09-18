@@ -2,8 +2,11 @@
 ((d,c,$) =>
 {	    
 		document.addEventListener('DOMContentLoaded', () => {
+			
 		  
-		  form = document.querySelector('.wpcf7-form')
+		  formulario = document.querySelector('.wpcf7-form')
+
+		  formulario.addEventListener('submit', envioFormulario)
 		  	
 		  let dias = 1,
           ciclo_conferencista = 0
@@ -26,10 +29,11 @@
 		  anadir_dias             = document.querySelector('.anadir-dia'),
           anadir_moderador_all = document.querySelectorAll('.boton-añadir-moderador'),
 		  anadir_conferencista_all = document.querySelectorAll('.boton-añadir-conferencista'),
+		  
 		  contador_dia = 0,
 		  moderador_array = Array.from(anadir_moderador_all),
 		  conferencista_array = Array.from(anadir_conferencista_all)
-		  
+		 
           content_dias[0].innerHTML = dias_string
           //console.log(content_dias[0])
           
@@ -121,7 +125,8 @@
 			
 			 
         }
-        
+		
+		
 
           //llamar a eventos 
 	      anadir_dias.addEventListener('click', ciclo_dias)
@@ -156,12 +161,47 @@
 	  })
 	  
 	  
+	  // formulario funcion 
+	  let code 
+	  let hidden = document.querySelector('.oculto')
+	  function envioFormulario(e){
+		  e.preventDefault()
+		  const inputFormulario = document.querySelectorAll('.wpcf7-form-control')
+		  inputFormularioArr = Array.from(inputFormulario)
+		  id_respuesta = []
+		  inputFormularioArr.forEach(elemt => {
+			let atributo = elemt.getAttribute('name'),
+				   valor = elemt.value
+				
+			if( valor != '' &&  valor != undefined &&  atributo != null && atributo  != undefined ){
+				
+				id_respuesta.push(`${atributo} : ${valor}`) 
+			}
+		})
+
+		
+		
+		var datos = {
+			action : 'whatsap_resultado',
+			data   : id_respuesta
+		}
+		
+		$.ajax({
+			url: admin_url.ajax_url,
+			type: 'post',
+			data: datos
+	   }).done(function(respuesta) {
+		   console.log(respuesta);
+	   });
+		
+	
+	}
    
 		 
 		 
-})
+  })
 
-       
+      console.log(admin_url.ajax_url)
 })
 (document,console.log,jQuery.noConflict())
 
