@@ -13,3 +13,4 @@ function whatsap_resultado()
 
 add_action('wp_ajax_nopriv_whatsap_resultado', 'whatsap_resultado');
 add_action('wp_ajax_whatsap_resultado', 'whatsap_resultado');
+
