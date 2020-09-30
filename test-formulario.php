@@ -3,7 +3,11 @@
        <h5 class="text-center">Queremos que seas parte de nosotros Inscribete Aquí </h5>
        <div class="col-12 col-sm-12">
            [select* patrocinante  class:border-botones class:especializacion  "Patrocinante" "Dynamics" "Surgery" "Dental"]
+<<<<<<< HEAD
        </div>
+=======
+      </div>
+>>>>>>> 96614617f576324042620d2e18ae415f2d980bc3
        <div class="flex-center">
           <span class="red text-center bg-danger">SELECIONAR MODALIDAD</span>
        </div>
@@ -220,7 +224,7 @@
         
        </div>
 
-
+      <input type="hidden" name="oculto" value >
 
 [/group]
 
