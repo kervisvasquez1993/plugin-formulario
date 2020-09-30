@@ -5,8 +5,9 @@
 		document.addEventListener('DOMContentLoaded', () => {
 		  
 		  form = document.querySelector('.wpcf7-form')
-		  	
 		  let dias = 1,
+		  condicional_dia = 1,
+		  
           ciclo_conferencista = 0
           dias_ciclos = Number(dias - 1)
 		  dias_string             = ` Día ${dias}`,
@@ -37,43 +38,39 @@
 		  // funcion para repetir los campos
 		  function ciclo(elemento_hijo,elemento_padre)
          {
-			ciclo_conferencista += 1
+		 	 
+		
 			let eliminar = document.createElement('p')
-            let clon_hijo = elemento_hijo.cloneNode(elemento_hijo)
-			let input = document.querySelectorAll('.test:last-child .wpcf7-form-control-wrap .wpcf7-form-control')
-			
+			let clon_hijo = elemento_hijo.cloneNode(elemento_hijo)
+			clon_hijo.classList.add('test')
 			eliminar.classList = "eliminar"
 			eliminar.innerHTML = 'Eliminar'
-			
 			clon_hijo.appendChild(eliminar)
-			console.log(input)
-			
-			
-		    elemento_padre.appendChild(clon_hijo)
-			inputArr = Array.from(input)
-			console.log(inputArr)
-			inputArr.forEach(i =>
-			{
-			
-               name_input = i.getAttribute('name')
-               let conferencista_name_atribute = `${name_input}_${ciclo_conferencista}`
-               i.setAttribute('name', conferencista_name_atribute )
-               i.value = ''
-			})
-
-			clon_hijo.classList.add('test')
-			
-
-
-
-			eliminar.addEventListener('click' , ()=>{
+			elemento_padre.appendChild(clon_hijo)
+            eliminar.addEventListener('click' , ()=>{
 				eliminar.parentElement.remove()
 			})
 		 }
 	   
+
+		 function reiniciar_inputs() {
+			
+			let input = document.querySelectorAll('.test:last-child .wpcf7-form-control-wrap .wpcf7-form-control')
+			inputArr = Array.from(input)
+			inputArr.forEach(i =>
+				{
+				   name_input = i.getAttribute('name')
+				   let conferencista_name_atribute = `${name_input}_${ciclo_conferencista}_dia_${condicional_dia}`
+				   i.setAttribute('name', conferencista_name_atribute )
+				   i.value = ''
+				  console.log(i.getAttribute('name'))
+				})
+		 }
+
 	   function ciclo_dias(e)
 	   {
-		   
+			condicional_dia += 1
+			console.log(condicional_dia)
 			e.preventDefault()
 			contador_dia += 1
 		    let clon_dia = dia_hija.cloneNode(dia_hija)
@@ -83,7 +80,7 @@
 			let campos_eliminar_repetido = document.querySelectorAll('.siguiente_dia .grupos-comun  .wrap-comun ')
 			let campos_eliminar_repetido2 = document.querySelectorAll('.siguiente_dia .grupos-comun  .wrap-comun .test')
 
-			console.log(campos_eliminar_repetido)
+			 //console.log(campos_eliminar_repetido)
 			campos_eliminar_repetido_array = Array.from(campos_eliminar_repetido)
 			campos_eliminar_repetido_array2 = Array.from(campos_eliminar_repetido2)
 			campos_eliminar_repetido2.forEach(a => {
@@ -112,19 +109,24 @@
 			{
 			  e.preventDefault()
 			  ciclo(moderador_hijo[contador_dia], moderador_padre[contador_dia])
+			  reiniciar_inputs()
 			})
 
 			// eventos conferencista
 
 			conferencista_array[contador_dia].addEventListener('click', (e)=>{
 				e.preventDefault()
-			ciclo(conferencista_hijo[contador_dia], conferencista_padre[contador_dia])
+			    ciclo(conferencista_hijo[contador_dia], conferencista_padre[contador_dia])
+			    reiniciar_inputs()
 		  })
 
 			 dias_menos = contador_dia - 1
 			 dias_mas = contador_dia + 1
 			 dias_string = ` Día ${dias_mas}`,
-             conferencia[dias_menos].innerHTML = dias_string
+			 conferencia[dias_menos].innerHTML = dias_string
+			 
+
+			 reiniciar_inputs()
 			
 			 
         }
@@ -134,10 +136,14 @@
 	      anadir_dias.addEventListener('click', ciclo_dias)
           //eventos conferncista
 		  
-		 
+		 // conferencista ciclo
 		  conferencista_array[0].addEventListener('click', (e)=>{
                 e.preventDefault()
-            ciclo(conferencista_hijo[0], conferencista_padre[0])
+			ciclo(conferencista_hijo[0], conferencista_padre[0])
+			// seleccionamos el ultimo test de clase
+			reiniciar_inputs()
+
+				
           })
 	   
 	   
@@ -146,20 +152,29 @@
          moderador_array[0].addEventListener('click', (e)=>
          {
                e.preventDefault()
-           ciclo(moderador_hijo[0], moderador_padre[0])
+		       ciclo(moderador_hijo[0], moderador_padre[0])
+			   reiniciar_inputs()
+			   
          })
 		 
 
-		 
-		 conferencista_array[1].addEventListener('click', (e)=>{
+		  // conferencista desde conferencia
+
+		 conferencista_array[1].addEventListener('click', (e)=>
+		{
 			e.preventDefault()
-		ciclo(conferencista_hijo[1], conferencista_padre[1])
-	  })
+		    ciclo(conferencista_hijo[1], conferencista_padre[1])
+			reiniciar_inputs()
+			
+
+	    })
 
 	  moderador_array[1].addEventListener('click', (e)=>
 	  {
 			e.preventDefault()
-		ciclo(moderador_hijo[1], moderador_padre[1])
+		    ciclo(moderador_hijo[1], moderador_padre[1])
+			reiniciar_inputs()
+			
 	  })
 	  
 	  
